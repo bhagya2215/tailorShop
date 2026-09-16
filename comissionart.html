@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jr Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="header2">
+        <nav>
+            <a href="Home Page.html"><img src="imeges/logo.png"width="90cm"height="90Cm"></a><h2><font color="#ffd700">JR ART GALLERY</font></h2>
+            <!--Navigation bar section-->
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="Home Page.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="comm.html">COMMISSIONS</a></li>
+                        <li><a href="contat.html">CONTACT</a></li>
+                        <li><a href="review.html">REVIEWS</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>COMMISSION ART WORKS</h1>
+    </section>
+<br>
+<br>
+<div class="commissionartlist">
+    <img src="imeges/compic1.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic2.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic3.jpg"alt=""onclick="openImage(this)">
+    <img src="imeges/compic4.jpg "alt=""onclick="openImage(this)">
+    <img src="imeges/compic5.jpg" alt=""onclick="openImage(this)"> 
+    <img src="imeges/compic6.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic7.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic8.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic9.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic10.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic11.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic12.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/compic13.jpg" alt=""onclick="openImage(this)">
+   
+</div>
+<div id="imageModal" class="modal" onclick="closeImage()">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+<!-- JavaScript code at the end of the body -->
+<script>
+    function openImage(imgElement) {
+        const modal = document.getElementById("imageModal");
+        const fullImage = document.getElementById("fullImage");
+
+        fullImage.src = imgElement.src; // Set the clicked image as the modal content
+        modal.style.display = "flex"; // Show the modal
+    }
+
+    function closeImage() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
+    }
+</script>
+<section id="commissions" class="commissions-section">
+    <a href="portfolio.html" class="cta-button">Back</a>
+    </section>
+  <!-- Footer -->
+  <br>
+  <center>
+    <footer>
+         <a href="Home Page.html"><img src="imeges/logo.png"width="90cm"height="90Cm"></a>
+        <p>&copy; 2024 Jr Art Gallery. All rights reserved.</p>
+        <div class="social-links" align="center">
+            <a href="https://www.tiktok.com/@d_i_n_i_t_h1?is_from_webapp=1&sender_device=pc">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACZUlEQVRYR+1WPSiFURimDAbKYDBeZaAMlJ8MBmVgIwxioMiikAxIrrIo+YmBDCRFoWwU6irFYDAoBrJYRDEYJOF5cr669zjnfN+59/qubk499Z3vvOc9z3nO+77npKb8sZb6x/ikJDWhUagdlBQ/Rr/S5hTiqVAvFp6WFr9BvxR48koqnoRUCpFHBXCaCEIqhchjFegE3ryQ8kMh8mgHVvwmpFOIPO6BGYFXEzG/FHI4HOBjEdgB3lXE/CbkcHjGB5Erk4onIdOR6U7px/pJTUhVh1h/GDPDQJ5CppgUyoLDNqAcKAQygFmROVxLRSiE/1VAGtAKdAH5AH2xRUWIC/cDjBHHkbPZID7GRMdESBYnWxDjXRfR3GKoGNaUu0GeKPqsLX3iWxXU5xijD8/NRIhqnIid6BxGq5CWoInQVNjudQ58U6hEqMNgDG8s+6yyh8A18AhcCAObGLJWaAEzmBHhjW+aIYBjqvarMXSpiJ1x/BvRbs2c9oZpkUOqGGJKPig88OV3lghCASx6Ky3MmzkTMD0dfjWGPhVKFODflUGhOYx1S+Nb6Dd5Pi8Y6tKeR8ajC2+T6AxonKcLVXOk8SD6TiX3xEtHaAmzOyQPL+jXAnK5Z2lYBxoVK9J+zxMTYaQjVI3xfYUjxhDTfhvgA4v1qgcoUthaXxv0YarUuxivsdmdZFuPPouoVTMRYprPA2VWHr+NJwAW0Q/buW63PY9kEwhYON6AbbOFfYSpGyEa89ZfBupcFrnD+CCwFi0ZzvNCyPHPJ2gLwGzio40pzsAOAUeCCDMxpmZDKKaFvE7+J+Sm1BcRe24lXj9fywAAAABJRU5ErkJggg=="/></a> | 
+            <a href="https://youtube.com/@jrartgallerypro?si=q6QHStZd_InmIVnf">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAB7ElEQVRYR+1XPUsEMRC9A8VvULAUXMEfIKhgoZ0WgoWCpYqFdhaCdoofhdgoFraWdhZaWtgpWGhhaecWCtpZ+IUI+h7kjjXsXG6SQw7ZwLB7O/MmLzOTSS6fq7KRrzI+uYyQKyNZhP5dhFqxog5Iu5Fms8JOx0ofoP8yNo94fpjf93jGpbBSDc0BtAKJXCH21N8CtwU5tPFphPZhtOA5kRZ2AMB8EmQT6oHyClKj9RxgPwTsRQFvE1qHYiPAuQ90F6BlidARFJM+XgMwp8COSoQuoRhQOL+BLdMcMmKAuyRCd1BECu+1sJ2FbEPYGnxGSULv8Fiv8FqoQfYr1h93p3ZDvADTIkXoDYoGBSE2yteE/QjeZyBTCh+cs0ki9K1wRFOpsY5BtwfpLtNf0Y/tsFKEWOhssIOhhLQpq8OEn4lJe/E+bdLWViYZ1m2jlDLfomYhL0J4/rHANYMHb7Fu7ZRptz3x2nqxycb4IPYhnmN9iuWdwXZYYZ9meo2P/VLKjqEYD5xACz8BYEIitAnFmtZjoD3vRasSIW7T88AJtPCS1w86+8u0/TrpOXlap+VZxi28BPE9MF1R4lbfgfAu9Jw0dv0v4wWfQpKRAbou+DaZJ3ywL/mxxNhFyLXSiuszQq6QZhHKIuSKgEv/A/AWQiUHDQzkAAAAAElFTkSuQmCC"/></a> |
+            <a href="https://www.facebook.com/Dinitharts"img src="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABQElEQVRYR2NkGGSAcZC5h2HUQYRiBFsIsQA1eQCxMSHNFMqfBerfgm4GNgdFAxUtodAyYrWD7FqGrBibg+qBChqINZFCdSB7Gkesg94AfX4FiB8AMQcQSwCxBpSGBQpdQugo0LaFUPwLLUrnA/kJSGI0d9ANoGXJQHwMR9qiu4MKgQ6ZgCeh091BhkDHXEBykAyQnY2UbmyAbBV6RdknoEWqQPwKycKJQHYenhCjaRoC5SZFNMsvA/k6A+WgD0CLBdEsPw/kG4xoBxHKVeiBAyootWmZqElxEB/QIY+AmH+wOEgT6JBraEFG9VxGSgi5Ah2zi9YOQjZ/NJfhKU7AUqMhNBpCsBAgt5E/moYGLA1FAW1eSsh2LPLkRBlRHUVyu9IfgY5Eb08XoFWmyP4guitNRuBQT8vocAyhsBx0IQQA3WdtJS2NVmQAAAAASUVORK5CYII="/></a>
+        </div><br>
+    </footer>
+</center>
+</section>
+<br>
+<br>
+
+</body>
+</html>

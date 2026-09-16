@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jr Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+     /* General styling */
+     body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+     }
+
+     /* Reviews section styling */
+     #subreviews, #addReview {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 40px 20px;
+        margin: 40px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+     }
+
+     /* Reviews heading */
+     #reviews h2, #addReview h2 {
+        color: #444;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+     }
+
+     /* Reviews container */
+     .reviews-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+     }
+
+     .review {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+     }
+
+     .review p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 10px;
+     }
+
+     .review span {
+        font-style: italic;
+        color: #666;
+     }
+
+     .rating {
+        color: #f5c518;
+        font-size: 1.2rem;
+        margin-top: 10px;
+     }
+
+     /* Form styling */
+     form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+     }
+
+     form input, form textarea, form select, form button {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+     }
+
+     form button {
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+     }
+
+     form button:hover {
+        background-color: #ffd700;
+     }
+    </style>
+</head>
+<body>
+    
+    <section class="header2">
+        <nav>
+            <a href="Home Page.html"><img src="imeges/logo1.png"width="110cm"height="115Cm"></a><h2><font color="#ffd700"></font></h2>
+            <!--Navigation bar section-->
+            
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="Home Page.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="portfolio.html">BOOK AN APPOINTMENT</a></li>
+                        <li><a href="contat.html">CONTACT</a></li>
+                        <li><a href="review.html">REVIEWS</a></li>
+                        <li><a href="cart.html"><img src="imeges/cart.png"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        <h1>REVIEWS</h1>
+    </section>
+
+    <section id="subreviews">
+        <h2>CUSTOMER REVIEWS</h2>
+        <div class="reviews-container" id="reviewsContainer">
+            <div class="review">
+                <p>"Amazing work, I'm thrilled with the piece!"</p>
+                <span>- Y.M. Yahampath</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="review">
+                <p>"The custom tailoring exceeded my expectations!"</p>
+                <span>- T.Perera</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="addReview">
+        <h2>Add Your Review</h2>
+        <form id="reviewForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="reviewText">Your Review:</label>
+            <textarea id="reviewText" placeholder="Write your review" required></textarea>
+
+            <label for="rating">Your Rating:</label>
+            <select id="rating" required>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐">⭐</option>
+            </select>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <script>
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewsContainer = document.getElementById('reviewsContainer');
+
+        reviewForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const reviewText = document.getElementById('reviewText').value.trim();
+            const rating = document.getElementById('rating').value;
+
+            if (!name || !reviewText || !rating) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const review = document.createElement('div');
+            review.className = 'review';
+            review.innerHTML = `
+                <p>"${reviewText}"</p>
+                <span>- ${name}</span>
+                <div class="rating">${rating}</div>
+            `;
+
+            reviewsContainer.appendChild(review);
+
+            reviewForm.reset();
+
+            alert('Thank you for your review!');
+        });
+    </script>
+
+<footer id="contact1">
+    <div class="container">
+      <div class="contact-info">
+        <div>
+          <h4>Contact Us</h4>
+          <p>150/A,Kandy, Sri Lanka</p>
+          <p>Email: info@jrtailors.com</p>
+          <p>Phone: +94 77 123 4567</p>
+        </div>
+        <div>
+          <h4>Opening Hours</h4>
+          <p>Mon - Fri: 9am - 6pm</p>
+          <p>Saturday: 10am - 4pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2025 JR Tailors. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

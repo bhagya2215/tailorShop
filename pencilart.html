@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customize Your Shirt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      display: flex;
+      gap: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .shirt-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .shirt-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .form-area {
+      flex: 1;
+    }
+
+    .form-area h2 {
+      text-align: left;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .cart-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #dff700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .cart-btn:hover {
+      background-color: #c3e000;
+    }
+
+    .color-options {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .color-swatch {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .color-swatch input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .color-swatch input[type="radio"]:checked + span {
+      border: 2px solid #000;
+      box-shadow: 0 0 0 2px #dff700;
+    }
+
+    .color-swatch span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .shirt-image,
+      .form-area {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Shirt Image -->
+    <div class="shirt-image">
+      <img src="images/formal-shirt-sample.jpg" alt="Formal Shirt">
+    </div>
+
+    <!-- Form -->
+    <div class="form-area">
+      <h2>Customize Your Formal Shirt</h2>
+      <form>
+        <!-- Collar Type -->
+        <div class="form-group">
+          <label for="collar">Collar Type</label>
+          <select id="collar" name="collar">
+            <option>Spread</option>
+            <option>Point</option>
+            <option>Cutaway</option>
+            <option>Button-Down</option>
+            <option>Mandarin</option>
+          </select>
+        </div>
+
+        <!-- Fit Type -->
+        <div class="form-group">
+          <label for="fit">Fit</label>
+          <select id="fit" name="fit">
+            <option>Slim Fit</option>
+            <option>Regular Fit</option>
+            <option>Athletic Fit</option>
+            <option>Relaxed Fit</option>
+          </select>
+        </div>
+
+        <!-- Cuff Type -->
+        <div class="form-group">
+          <label for="cuff">Cuff Type</label>
+          <select id="cuff" name="cuff">
+            <option>Button Cuff</option>
+            <option>French Cuff</option>
+            <option>Convertible Cuff</option>
+          </select>
+        </div>
+
+        <!-- Fabric -->
+        <div class="form-group">
+          <label for="fabric">Fabric</label>
+          <select id="fabric" name="fabric">
+            <option>Cotton</option>
+            <option>Linen</option>
+            <option>Silk</option>
+            <option>Blended</option>
+          </select>
+        </div>
+
+        <!-- Pattern -->
+        <div class="form-group">
+          <label for="pattern">Pattern</label>
+          <select id="pattern" name="pattern">
+            <option>Solid</option>
+            <option>Striped</option>
+            <option>Checked</option>
+            <option>Textured</option>
+          </select>
+        </div>
+
+        <!-- Shirt Color -->
+        <div class="form-group">
+          <label>Color</label>
+          <div class="color-options">
+            <label class="color-swatch">
+              <input type="radio" name="shirtColor" value="White">
+              <span style="background-color: white;"></span>
+            </label>
+            <label class="color-swatch">
+              <input type="radio" name="shirtColor" value="Light Blue">
+              <span style="background-color: lightblue;"></span>
+            </label>
+            <label class="color-swatch">
+              <input type="radio" name="shirtColor" value="Gray">
+              <span style="background-color: gray;"></span>
+            </label>
+            <label class="color-swatch">
+              <input type="radio" name="shirtColor" value="Black">
+              <span style="background-color: black;"></span>
+            </label>
+            <label class="color-swatch">
+              <input type="radio" name="shirtColor" value="Pink">
+              <span style="background-color: pink;"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Add to Cart -->
+        <button type="button" class="cart-btn">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+<div class="pencilartlist">
+
+    
+    <img src="imeges/art2.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/mamitha1.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/art3.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/art4.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/chamara.jpg" alt=""onclick="openImage(this)"> 
+    <img src="imeges/danith.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/danush.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/girl.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/hemal.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/hemine.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/kanchi.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/kalana.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/lusena.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/moon.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/rashmika.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sai.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sanga.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sharuk.jpg" alt=""onclick="openImage(this)"> 
+    <img src="imeges/suki.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sushant.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sibly.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/wendsday.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/wani.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/yuki.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/rashmika2.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/movie1.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/damsara.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/pathum.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/sethupathi.jpg" alt=""onclick="openImage(this)">
+    <img src="imeges/shersha.jpg" alt=""onclick="openImage(this)">
+</div>
+<div id="imageModal" class="modal" onclick="closeImage()">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+<!-- JavaScript code at the end of the body -->
+<script>
+    function openImage(imgElement) {
+        const modal = document.getElementById("imageModal");
+        const fullImage = document.getElementById("fullImage");
+
+        fullImage.src = imgElement.src; // Set the clicked image as the modal content
+        modal.style.display = "flex"; // Show the modal
+    }
+
+    function closeImage() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
+    }
+</script>
+<section id="commissions" class="commissions-section">
+<a href="portfolio.html" class="cta-button">Back</a>
+</section>
+
+  <!-- Footer -->
+  <br>
+  <center>
+    <footer>
+         <a href="Home Page.html"><img src="imeges/logo.png"width="90cm"height="90Cm"></a>
+        <p>&copy; 2024 Jr Art Gallery. All rights reserved.</p>
+        <div class="social-links" align="center">
+            <a href="https://www.tiktok.com/@d_i_n_i_t_h1?is_from_webapp=1&sender_device=pc">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACZUlEQVRYR+1WPSiFURimDAbKYDBeZaAMlJ8MBmVgIwxioMiikAxIrrIo+YmBDCRFoWwU6irFYDAoBrJYRDEYJOF5cr669zjnfN+59/qubk499Z3vvOc9z3nO+77npKb8sZb6x/ikJDWhUagdlBQ/Rr/S5hTiqVAvFp6WFr9BvxR48koqnoRUCpFHBXCaCEIqhchjFegE3ryQ8kMh8mgHVvwmpFOIPO6BGYFXEzG/FHI4HOBjEdgB3lXE/CbkcHjGB5Erk4onIdOR6U7px/pJTUhVh1h/GDPDQJ5CppgUyoLDNqAcKAQygFmROVxLRSiE/1VAGtAKdAH5AH2xRUWIC/cDjBHHkbPZID7GRMdESBYnWxDjXRfR3GKoGNaUu0GeKPqsLX3iWxXU5xijD8/NRIhqnIid6BxGq5CWoInQVNjudQ58U6hEqMNgDG8s+6yyh8A18AhcCAObGLJWaAEzmBHhjW+aIYBjqvarMXSpiJ1x/BvRbs2c9oZpkUOqGGJKPig88OV3lghCASx6Ky3MmzkTMD0dfjWGPhVKFODflUGhOYx1S+Nb6Dd5Pi8Y6tKeR8ajC2+T6AxonKcLVXOk8SD6TiX3xEtHaAmzOyQPL+jXAnK5Z2lYBxoVK9J+zxMTYaQjVI3xfYUjxhDTfhvgA4v1qgcoUthaXxv0YarUuxivsdmdZFuPPouoVTMRYprPA2VWHr+NJwAW0Q/buW63PY9kEwhYON6AbbOFfYSpGyEa89ZfBupcFrnD+CCwFi0ZzvNCyPHPJ2gLwGzio40pzsAOAUeCCDMxpmZDKKaFvE7+J+Sm1BcRe24lXj9fywAAAABJRU5ErkJggg=="/></a> | 
+            <a href="https://youtube.com/@jrartgallerypro?si=q6QHStZd_InmIVnf">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAB7ElEQVRYR+1XPUsEMRC9A8VvULAUXMEfIKhgoZ0WgoWCpYqFdhaCdoofhdgoFraWdhZaWtgpWGhhaecWCtpZ+IUI+h7kjjXsXG6SQw7ZwLB7O/MmLzOTSS6fq7KRrzI+uYyQKyNZhP5dhFqxog5Iu5Fms8JOx0ofoP8yNo94fpjf93jGpbBSDc0BtAKJXCH21N8CtwU5tPFphPZhtOA5kRZ2AMB8EmQT6oHyClKj9RxgPwTsRQFvE1qHYiPAuQ90F6BlidARFJM+XgMwp8COSoQuoRhQOL+BLdMcMmKAuyRCd1BECu+1sJ2FbEPYGnxGSULv8Fiv8FqoQfYr1h93p3ZDvADTIkXoDYoGBSE2yteE/QjeZyBTCh+cs0ki9K1wRFOpsY5BtwfpLtNf0Y/tsFKEWOhssIOhhLQpq8OEn4lJe/E+bdLWViYZ1m2jlDLfomYhL0J4/rHANYMHb7Fu7ZRptz3x2nqxycb4IPYhnmN9iuWdwXZYYZ9meo2P/VLKjqEYD5xACz8BYEIitAnFmtZjoD3vRasSIW7T88AJtPCS1w86+8u0/TrpOXlap+VZxi28BPE9MF1R4lbfgfAu9Jw0dv0v4wWfQpKRAbou+DaZJ3ywL/mxxNhFyLXSiuszQq6QZhHKIuSKgEv/A/AWQiUHDQzkAAAAAElFTkSuQmCC"/></a> |
+            <a href="https://www.facebook.com/Dinitharts"img src="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABQElEQVRYR2NkGGSAcZC5h2HUQYRiBFsIsQA1eQCxMSHNFMqfBerfgm4GNgdFAxUtodAyYrWD7FqGrBibg+qBChqINZFCdSB7Gkesg94AfX4FiB8AMQcQSwCxBpSGBQpdQugo0LaFUPwLLUrnA/kJSGI0d9ANoGXJQHwMR9qiu4MKgQ6ZgCeh091BhkDHXEBykAyQnY2UbmyAbBV6RdknoEWqQPwKycKJQHYenhCjaRoC5SZFNMsvA/k6A+WgD0CLBdEsPw/kG4xoBxHKVeiBAyootWmZqElxEB/QIY+AmH+wOEgT6JBraEFG9VxGSgi5Ah2zi9YOQjZ/NJfhKU7AUqMhNBpCsBAgt5E/moYGLA1FAW1eSsh2LPLkRBlRHUVyu9IfgY5Eb08XoFWmyP4guitNRuBQT8vocAyhsBx0IQQA3WdtJS2NVmQAAAAASUVORK5CYII="/></a>
+        </div><br>
+    </footer>
+</center>
+</section>
+<br>
+<br>
+
+</body>
+</html>
